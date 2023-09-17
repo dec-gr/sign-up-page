@@ -1,0 +1,168 @@
+@font-face {
+  font-family: norse;
+  src: url(fonts/Norse-Bold.otf);
+}
+
+@font-face {
+  font-family: "norse2";
+  src: url("fonts/norse-bold-webfont.woff") format("woff"),
+    url("fonts/norse-bold-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --green-color: #596d48;
+  --text-padding: 2rem;
+}
+
+body {
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container-left {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  background: url("/images/background.jpg");
+  background-size: cover;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 40vw;
+  min-width: 20rem;
+}
+
+.banner {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.677);
+  color: white;
+  font-family: norse2, sans-serif;
+  height: 10rem;
+  font-size: 6rem;
+  align-items: center;
+  padding: 20px;
+  justify-content: center;
+}
+
+.banner > img {
+  max-height: 100%;
+}
+
+.credit {
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+  margin: 0px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.credit a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit underline;
+}
+
+.container-right {
+  display: flex;
+  flex-grow: 3;
+  flex-direction: column;
+  background-color: rgb(249, 250, 251);
+  margin-left: auto;
+  max-height: 100vh;
+}
+
+.heading-text {
+  padding: var(--text-padding);
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.form-body {
+  background-color: white;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+  padding: var(--text-padding);
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  flex-wrap: wrap;
+  max-width: 40rem;
+}
+ul li {
+  min-width: 11rem;
+  max-width: 15rem;
+  width: 40%;
+  padding: 0px;
+  margin: 2% 0%;
+  display: inline-block;
+}
+
+ul li > * {
+  width: 100%;
+}
+
+input {
+  border-color: #e5e7eb;
+  border-radius: 5px;
+}
+
+button {
+  background-color: var(--green-color);
+  color: white;
+  font-size: inherit;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.right-bottom {
+  color: black;
+  padding-left: var(--text-padding);
+  font-size: 1rem;
+}
+
+.right-bottom p {
+  font-size: inherit;
+}
+
+.right-bottom a {
+  color: var(--green-color);
+  text-decoration: inherit underline;
+}
+
+input:focus {
+  border-color: blue;
+}
+
+input.error,
+input:invalid {
+  border-color: red;
+}
+
+input + span {
+  position: relative;
+}
+
+input:required + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "*";
+  color: red;
+  padding: 5px 10px;
+  top: -40px;
+  left: -20px;
+}

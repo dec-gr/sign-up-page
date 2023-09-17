@@ -6,5 +6,109 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="container-left">
+        <div class="top-left"></div>
+        <div class="banner">
+          <img src="images/odin-lined.png" alt="Odin Logo" />
+          <p>ODIN</p>
+        </div>
+        <div class="credit">
+          <h3>
+            Photo by
+            <a
+              href="https://unsplash.com/photos/25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
+              target="_blank"
+              >Haile West</a
+            >
+            on Unsplash
+          </h3>
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="heading-text">
+          <p>
+            This is not a real online service! You know you need something like
+            this in your life to help you realise your deepest dreams. Sign up
+            <em>now</em> to get started.
+          </p>
+          <p>You <em>know</em> you want to.</p>
+        </div>
+        <form action="https://httpbin.org/post" method="post">
+          <div class="form-body">
+            <h2>Let's do this!</h2>
+            <p>Required fields are labelled with *.</p>
+            <ul>
+              <li>
+                <label for="first_name">FIRST NAME</label>
+                <input
+                  type="text"
+                  name="user_first_name"
+                  placeholder="Thor"
+                  required
+                  id="first_name"
+                  minlength="1"
+                />
+                <span></span>
+              </li>
+              <li>
+                <label for="last_name">LAST NAME</label>
+                <input
+                  type="text"
+                  name="user_last_name"
+                  placeholder="Odinson"
+                  id="last_name"
+                  minlength="1"
+                />
+              </li>
+              <li>
+                <label for="email">EMAIL</label>
+                <input id="email" type="email" name="user_email" required />
+                <span></span>
+              </li>
+              <li>
+                <label for="phone">PHONE NUMBER</label>
+                <input id="phone" type="tel" name="user_phone" />
+              </li>
+              <li>
+                <label for="password1">PASSWORD</label>
+                <input
+                  type="password"
+                  name="user_password1"
+                  class="error"
+                  required
+                  id="password1"
+                  minlength="5"
+                />
+                <span></span>
+              </li>
+              <li>
+                <label for="password2">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  name="user_password2"
+                  class="error"
+                  required
+                  id="password2"
+                  minlength="5"
+                />
+                <span></span>
+              </li>
+            </ul>
+          </div>
+          <div class="right-bottom">
+            <button type="submit">Create Account</button>
+          </div>
+        </form>
+
+        <div class="right-bottom">
+          <p>
+            Already have an account?
+            <a href="">Log in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
